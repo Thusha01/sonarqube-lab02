@@ -1,15 +1,23 @@
-package main.java.com.example;
+package com.example;
+
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 public class App {
+
+    private static final Logger logger = Logger.getLogger(App.class.getName());
 
     public static void main(String[] args) throws Exception {
 
         Calculator calc = new Calculator();
+        int result = calc.calculate(10, 5, "add-again");
 
-        System.out.println(calc.calculate(10, 5, "add"));
+        if (logger.isLoggable(Level.INFO)) {
+            logger.info("Result = " + result);
+        }
 
         UserService service = new UserService();
         service.findUser("admin");
+        service.deleteUser("admin");
     }
 }
-
