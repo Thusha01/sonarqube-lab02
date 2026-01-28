@@ -14,16 +14,24 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
-    <!-- ✅ ADD THIS -->
-    <dependencies>
-        <!-- JUnit 5 for unit testing -->
+   <dependencies>
+        <!-- JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.10.1</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- JUnit Parameterized Tests -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
